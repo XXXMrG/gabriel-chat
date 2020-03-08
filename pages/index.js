@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import io from 'socket.io-client'
 
 const socket = io('https://xkeith.tech:3000')
@@ -6,6 +6,7 @@ const socket = io('https://xkeith.tech:3000')
 const Index = () => {
   const [data, setData] = useState([])
   const [message, setMessage] = useState('')
+  const chatRef = useRef(null)
   const list = data.map((val, index) => <li key={index}>{val}</li>)
 
   const handleMessage = e => {
@@ -26,7 +27,10 @@ const Index = () => {
 
   useEffect(() => {
     socket.on('chat message', msg => {
+      const { current } = chatRef
       setData([...data, msg])
+      // make scrollbar to the bottom
+      current.scrollTop = current.scrollHeight
     })
     // must remove the socket when unmounted
     return () => {
@@ -38,7 +42,7 @@ const Index = () => {
     <>
       <div className="container">
         <div className="main">
-          <div className="chat">
+          <div className="chat" ref={chatRef}>
             <ul className="message">{list}</ul>
           </div>
           <div className="input">
