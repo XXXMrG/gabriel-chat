@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import io from 'socket.io-client'
 
-const socket = io('http://39.96.50.163:3000')
+const socket = io('https://xkeith.tech:3000')
 
 const Index = () => {
   const [data, setData] = useState([])
@@ -26,7 +26,6 @@ const Index = () => {
 
   useEffect(() => {
     socket.on('chat message', msg => {
-      console.log(data)
       setData([...data, msg])
     })
     // must remove the socket when unmounted
