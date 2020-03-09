@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
 import io from 'socket.io-client'
 
 const socket = io('https://xkeith.tech:3000')
@@ -46,12 +48,15 @@ const Index = () => {
             <ul className="message">{list}</ul>
           </div>
           <div className="input">
-            <input
+            <TextField
+              className="text"
               value={message}
               onChange={handleMessage}
               onKeyDown={handleKeyDown}
             />
-            <button onClick={handleSend}>SEND</button>
+            <Button onClick={handleSend} className="send">
+              SEND
+            </Button>
           </div>
         </div>
       </div>
@@ -85,14 +90,15 @@ const Index = () => {
           border-radius: 0 0 10px 10px;
           border: 1px burlywood solid;
         }
-        input {
+        .text {
           width: 70%;
           height: 80%;
         }
-        button {
+        .send {
           width: 25%;
           height: 80%;
           margin-left: 10px;
+          background: black;
         }
       `}</style>
       <style jsx global>{`

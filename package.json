@@ -20,11 +20,14 @@
   },
   "homepage": "https://github.com/XXXMrG/gabriel-chat#readme",
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
+    "@material-ui/icons": "^4.9.1",
     "next": "^9.2.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0"
+    "socket.io-client": "^2.3.0",
+    "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
