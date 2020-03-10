@@ -93,6 +93,120 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/chat.js":
+/*!****************************!*\
+  !*** ./components/chat.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return BottomAppBar; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/components/chat.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+/* eslint-disable quotes */
+
+
+
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["makeStyles"])(theme => ({
+  paper: {
+    paddingBottom: 50,
+    overflow: 'auto',
+    backgroundColor: '#e0f7fa'
+  },
+  list: {
+    marginBottom: theme.spacing(2)
+  }
+}));
+function BottomAppBar(props) {
+  const classes = useStyles();
+  const messages = props.data;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["CssBaseline"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }), __jsx("div", {
+    className: classes.chat,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Paper"], {
+    square: true,
+    className: classes.paper,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["List"], {
+    className: classes.list,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, messages.map(({
+    message,
+    name,
+    avatar
+  }, index) => __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
+    key: index,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ListItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ListItemAvatar"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Avatar"], {
+    alt: "Profile Picture",
+    src: avatar,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["ListItemText"], {
+    primary: message,
+    secondary: name,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }))))))));
+}
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -102,44 +216,129 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
-/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/TextField */ "@material-ui/core/TextField");
-/* harmony import */ var _material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_chat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/chat */ "./components/chat.js");
+/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Telegram */ "@material-ui/icons/Telegram");
+/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/MoreVert */ "@material-ui/icons/MoreVert");
+/* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/index.js";
 
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
 
-const socket = socket_io_client__WEBPACK_IMPORTED_MODULE_4___default()('https://xkeith.tech:3000');
 
-const Index = () => {
+
+
+
+const socket = socket_io_client__WEBPACK_IMPORTED_MODULE_6___default()('https://xkeith.tech:3000');
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__["makeStyles"])({
+  send: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px'
+  },
+  root: {
+    maxHeight: '100vh',
+    overflow: 'hidden',
+    padding: 0
+  },
+  chat: {
+    backgroundColor: '#e0f7fa',
+    height: '100vh',
+    overflow: 'auto'
+  },
+  input: {
+    width: '75%'
+  },
+  appBar: {
+    top: 'auto',
+    bottom: 0,
+    background: 'linear-gradient(45deg, #e0f7fa 30%, #0097a7 90%)'
+  },
+  grow: {
+    flexGrow: 1
+  },
+  fabButton: {
+    position: 'absolute',
+    zIndex: 1,
+    top: -30,
+    left: 0,
+    right: 0,
+    margin: '0 auto'
+  }
+}); // hoc to control app bar hidden
+
+function HideOnScroll(props) {
+  const {
+    target,
+    children
+  } = props;
+  const trigger = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["useScrollTrigger"])({
+    target: target || undefined
+  });
+
+  if (target) {
+    return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Slide"], {
+      appear: false,
+      direction: "down",
+      in: !trigger,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
+      },
+      __self: this
+    }, children);
+  }
+
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, children);
+}
+
+const fetchData = url => {
+  return fetch(url).then(res => res.json());
+};
+
+function Layout(props) {
+  const classes = useStyles();
+  const chat = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   const {
     0: data,
     1: setData
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([]);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   const {
     0: message,
     1: setMessage
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])('');
-  const chatRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])(null);
-  const list = data.map((val, index) => __jsx("li", {
-    key: index,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: undefined
-  }, val));
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: trigger,
+    1: setTrigger
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null);
+  const {
+    0: userName,
+    1: setName
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
 
   const handleMessage = e => {
     e.preventDefault();
@@ -148,7 +347,11 @@ const Index = () => {
 
   const handleSend = () => {
     if (message !== '') {
-      socket.emit('chat message', message);
+      const messageObject = {
+        name: userName,
+        message
+      };
+      socket.emit('chat message', JSON.stringify(messageObject));
       setMessage('');
     }
   };
@@ -159,12 +362,20 @@ const Index = () => {
     }
   };
 
-  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     socket.on('chat message', msg => {
       const {
+        name,
+        message
+      } = JSON.parse(msg);
+      const {
         current
-      } = chatRef;
-      setData([...data, msg]); // make scrollbar to the bottom
+      } = chat;
+      setData([...data, {
+        name,
+        message,
+        avatar: `https://api.adorable.io/avatars/285/${name}.png`
+      }]); // make scrollbar to the bottom
 
       current.scrollTop = current.scrollHeight;
     }); // must remove the socket when unmounted
@@ -173,70 +384,158 @@ const Index = () => {
       socket.off('chat message');
     };
   });
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
-    className: "jsx-3905675761" + " " + "container",
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setTrigger(chat.current);
+  }, []);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    fetchData('/api/getName').then(res => {
+      setName(res.name);
+    });
+  }, []);
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["CssBaseline"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 142
     },
-    __self: undefined
+    __self: this
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+    className: classes.root,
+    maxWidth: "lg",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
+    elevation: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 144
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+    container: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
+    item: true,
+    xs: 12,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 146
+    },
+    __self: this
   }, __jsx("div", {
-    className: "jsx-3905675761" + " " + "main",
+    className: classes.chat,
+    ref: chat,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 147
     },
-    __self: undefined
-  }, __jsx("div", {
-    ref: chatRef,
-    className: "jsx-3905675761" + " " + "chat",
+    __self: this
+  }, __jsx(HideOnScroll, _extends({
+    target: trigger
+  }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 148
     },
-    __self: undefined
-  }, __jsx("ul", {
-    className: "jsx-3905675761" + " " + "message",
+    __self: this
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
+    position: "sticky",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 149
     },
-    __self: undefined
-  }, list)), __jsx("div", {
-    className: "jsx-3905675761" + " " + "input",
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 150
     },
-    __self: undefined
-  }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    className: "text",
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
+    variant: "h6",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 151
+    },
+    __self: this
+  }, "Gabriel Chat")))), __jsx(_components_chat__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: data,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 155
+    },
+    __self: this
+  }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
+    position: "sticky",
+    className: classes.appBar,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 158
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 159
+    },
+    __self: this
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["TextField"], {
+    className: classes.input,
+    label: "Say something...",
+    color: "secondary",
     value: message,
     onChange: handleMessage,
     onKeyDown: handleKeyDown,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 160
     },
-    __self: undefined
-  }), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    __self: this
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Fab"], {
+    color: "secondary",
+    "aria-label": "add",
+    className: classes.fabButton,
     onClick: handleSend,
-    className: "send",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 168
     },
-    __self: undefined
-  }, "SEND")))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "3119147368",
-    __self: undefined
-  }, "body.jsx-3905675761{margin:0px;}.container.jsx-3905675761{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;box-sizing:border-box;}.main.jsx-3905675761{box-sizing:border-box;margin:auto;border:1px black solid;border-radius:10px;height:90vh;width:70%;}.chat.jsx-3905675761{width:100%;height:93%;border-radius:10px 10px 0 0;background-color:pink;overflow:auto;}.input.jsx-3905675761{width:100%;height:7%;border-radius:0 0 10px 10px;border:1px burlywood solid;}.text.jsx-3905675761{width:70%;height:80%;}.send.jsx-3905675761{width:25%;height:80%;margin-left:10px;background:black;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy94eHhtcmcvRG93bmxvYWRzL0NvZGUvR2l0L2dhYnJpZWwtY2hhdC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUErRGtCLEFBR3NCLEFBR0UsQUFJUyxBQVFYLEFBT0EsQUFNRCxBQUlBLFVBSEMsQUFJQSxDQWhDYixBQWVhLEFBT0QsVUFDa0IsQUFNOUIsQUFJbUIsQ0ExQkwsQUFTZ0IsWUFSTCxJQTBCTixXQVZVLENBUEwsS0FrQnhCLEVBMUJxQixlQVNMLEVBZlEsRUFPVixBQWVkLFVBTkEsRUFSWSxRQVBaLEVBUUEiLCJmaWxlIjoiL1VzZXJzL3h4eG1yZy9Eb3dubG9hZHMvQ29kZS9HaXQvZ2FicmllbC1jaGF0L3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCwgdXNlUmVmIH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgQnV0dG9uIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL0J1dHRvbidcbmltcG9ydCBUZXh0RmllbGQgZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvVGV4dEZpZWxkJ1xuaW1wb3J0IGlvIGZyb20gJ3NvY2tldC5pby1jbGllbnQnXG5cbmNvbnN0IHNvY2tldCA9IGlvKCdodHRwczovL3hrZWl0aC50ZWNoOjMwMDAnKVxuXG5jb25zdCBJbmRleCA9ICgpID0+IHtcbiAgY29uc3QgW2RhdGEsIHNldERhdGFdID0gdXNlU3RhdGUoW10pXG4gIGNvbnN0IFttZXNzYWdlLCBzZXRNZXNzYWdlXSA9IHVzZVN0YXRlKCcnKVxuICBjb25zdCBjaGF0UmVmID0gdXNlUmVmKG51bGwpXG4gIGNvbnN0IGxpc3QgPSBkYXRhLm1hcCgodmFsLCBpbmRleCkgPT4gPGxpIGtleT17aW5kZXh9Pnt2YWx9PC9saT4pXG5cbiAgY29uc3QgaGFuZGxlTWVzc2FnZSA9IGUgPT4ge1xuICAgIGUucHJldmVudERlZmF1bHQoKVxuICAgIHNldE1lc3NhZ2UoZS50YXJnZXQudmFsdWUpXG4gIH1cbiAgY29uc3QgaGFuZGxlU2VuZCA9ICgpID0+IHtcbiAgICBpZiAobWVzc2FnZSAhPT0gJycpIHtcbiAgICAgIHNvY2tldC5lbWl0KCdjaGF0IG1lc3NhZ2UnLCBtZXNzYWdlKVxuICAgICAgc2V0TWVzc2FnZSgnJylcbiAgICB9XG4gIH1cbiAgY29uc3QgaGFuZGxlS2V5RG93biA9IGUgPT4ge1xuICAgIGlmIChlLndoaWNoID09PSAxMykge1xuICAgICAgaGFuZGxlU2VuZCgpXG4gICAgfVxuICB9XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBzb2NrZXQub24oJ2NoYXQgbWVzc2FnZScsIG1zZyA9PiB7XG4gICAgICBjb25zdCB7IGN1cnJlbnQgfSA9IGNoYXRSZWZcbiAgICAgIHNldERhdGEoWy4uLmRhdGEsIG1zZ10pXG4gICAgICAvLyBtYWtlIHNjcm9sbGJhciB0byB0aGUgYm90dG9tXG4gICAgICBjdXJyZW50LnNjcm9sbFRvcCA9IGN1cnJlbnQuc2Nyb2xsSGVpZ2h0XG4gICAgfSlcbiAgICAvLyBtdXN0IHJlbW92ZSB0aGUgc29ja2V0IHdoZW4gdW5tb3VudGVkXG4gICAgcmV0dXJuICgpID0+IHtcbiAgICAgIHNvY2tldC5vZmYoJ2NoYXQgbWVzc2FnZScpXG4gICAgfVxuICB9KVxuXG4gIHJldHVybiAoXG4gICAgPD5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWFpblwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2hhdFwiIHJlZj17Y2hhdFJlZn0+XG4gICAgICAgICAgICA8dWwgY2xhc3NOYW1lPVwibWVzc2FnZVwiPntsaXN0fTwvdWw+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbnB1dFwiPlxuICAgICAgICAgICAgPFRleHRGaWVsZFxuICAgICAgICAgICAgICBjbGFzc05hbWU9XCJ0ZXh0XCJcbiAgICAgICAgICAgICAgdmFsdWU9e21lc3NhZ2V9XG4gICAgICAgICAgICAgIG9uQ2hhbmdlPXtoYW5kbGVNZXNzYWdlfVxuICAgICAgICAgICAgICBvbktleURvd249e2hhbmRsZUtleURvd259XG4gICAgICAgICAgICAvPlxuICAgICAgICAgICAgPEJ1dHRvbiBvbkNsaWNrPXtoYW5kbGVTZW5kfSBjbGFzc05hbWU9XCJzZW5kXCI+XG4gICAgICAgICAgICAgIFNFTkRcbiAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuXG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgIGJvZHkge1xuICAgICAgICAgIG1hcmdpbjogMHB4O1xuICAgICAgICB9XG4gICAgICAgIC5jb250YWluZXIge1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgICAgICAgfVxuICAgICAgICAubWFpbiB7XG4gICAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgICAgICAgICBtYXJnaW46IGF1dG87XG4gICAgICAgICAgYm9yZGVyOiAxcHggYmxhY2sgc29saWQ7XG4gICAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICAgICAgICBoZWlnaHQ6IDkwdmg7XG4gICAgICAgICAgd2lkdGg6IDcwJTtcbiAgICAgICAgfVxuICAgICAgICAuY2hhdCB7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgaGVpZ2h0OiA5MyU7XG4gICAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweCAxMHB4IDAgMDtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBwaW5rO1xuICAgICAgICAgIG92ZXJmbG93OiBhdXRvO1xuICAgICAgICB9XG4gICAgICAgIC5pbnB1dCB7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgaGVpZ2h0OiA3JTtcbiAgICAgICAgICBib3JkZXItcmFkaXVzOiAwIDAgMTBweCAxMHB4O1xuICAgICAgICAgIGJvcmRlcjogMXB4IGJ1cmx5d29vZCBzb2xpZDtcbiAgICAgICAgfVxuICAgICAgICAudGV4dCB7XG4gICAgICAgICAgd2lkdGg6IDcwJTtcbiAgICAgICAgICBoZWlnaHQ6IDgwJTtcbiAgICAgICAgfVxuICAgICAgICAuc2VuZCB7XG4gICAgICAgICAgd2lkdGg6IDI1JTtcbiAgICAgICAgICBoZWlnaHQ6IDgwJTtcbiAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiBibGFjaztcbiAgICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuICAgICAgPHN0eWxlIGpzeCBnbG9iYWw+e2BcbiAgICAgICAgLm1lc3NhZ2Uge1xuICAgICAgICAgIGxpc3Qtc3R5bGUtdHlwZTogbm9uZTtcbiAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgcGFkZGluZzogMTBweDtcbiAgICAgICAgfVxuICAgICAgICAubWVzc2FnZSBsaTpudGgtY2hpbGQob2RkKSB7XG4gICAgICAgICAgYmFja2dyb3VuZDogYmVpZ2U7XG4gICAgICAgIH1cbiAgICAgIGB9PC9zdHlsZT5cbiAgICA8Lz5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBJbmRleFxuIl19 */\n/*@ sourceURL=/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/index.js */"), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "289336688",
-    __self: undefined
-  }, ".message{list-style-type:none;margin:0;padding:10px;}.message li:nth-child(odd){background:beige;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy94eHhtcmcvRG93bmxvYWRzL0NvZGUvR2l0L2dhYnJpZWwtY2hhdC9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF1R3lCLEFBR2dDLEFBS0osaUJBQ25CLElBTFcsU0FDSSxhQUNmIiwiZmlsZSI6Ii9Vc2Vycy94eHhtcmcvRG93bmxvYWRzL0NvZGUvR2l0L2dhYnJpZWwtY2hhdC9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZVN0YXRlLCB1c2VFZmZlY3QsIHVzZVJlZiB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEJ1dHRvbiBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9CdXR0b24nXG5pbXBvcnQgVGV4dEZpZWxkIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL1RleHRGaWVsZCdcbmltcG9ydCBpbyBmcm9tICdzb2NrZXQuaW8tY2xpZW50J1xuXG5jb25zdCBzb2NrZXQgPSBpbygnaHR0cHM6Ly94a2VpdGgudGVjaDozMDAwJylcblxuY29uc3QgSW5kZXggPSAoKSA9PiB7XG4gIGNvbnN0IFtkYXRhLCBzZXREYXRhXSA9IHVzZVN0YXRlKFtdKVxuICBjb25zdCBbbWVzc2FnZSwgc2V0TWVzc2FnZV0gPSB1c2VTdGF0ZSgnJylcbiAgY29uc3QgY2hhdFJlZiA9IHVzZVJlZihudWxsKVxuICBjb25zdCBsaXN0ID0gZGF0YS5tYXAoKHZhbCwgaW5kZXgpID0+IDxsaSBrZXk9e2luZGV4fT57dmFsfTwvbGk+KVxuXG4gIGNvbnN0IGhhbmRsZU1lc3NhZ2UgPSBlID0+IHtcbiAgICBlLnByZXZlbnREZWZhdWx0KClcbiAgICBzZXRNZXNzYWdlKGUudGFyZ2V0LnZhbHVlKVxuICB9XG4gIGNvbnN0IGhhbmRsZVNlbmQgPSAoKSA9PiB7XG4gICAgaWYgKG1lc3NhZ2UgIT09ICcnKSB7XG4gICAgICBzb2NrZXQuZW1pdCgnY2hhdCBtZXNzYWdlJywgbWVzc2FnZSlcbiAgICAgIHNldE1lc3NhZ2UoJycpXG4gICAgfVxuICB9XG4gIGNvbnN0IGhhbmRsZUtleURvd24gPSBlID0+IHtcbiAgICBpZiAoZS53aGljaCA9PT0gMTMpIHtcbiAgICAgIGhhbmRsZVNlbmQoKVxuICAgIH1cbiAgfVxuXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgc29ja2V0Lm9uKCdjaGF0IG1lc3NhZ2UnLCBtc2cgPT4ge1xuICAgICAgY29uc3QgeyBjdXJyZW50IH0gPSBjaGF0UmVmXG4gICAgICBzZXREYXRhKFsuLi5kYXRhLCBtc2ddKVxuICAgICAgLy8gbWFrZSBzY3JvbGxiYXIgdG8gdGhlIGJvdHRvbVxuICAgICAgY3VycmVudC5zY3JvbGxUb3AgPSBjdXJyZW50LnNjcm9sbEhlaWdodFxuICAgIH0pXG4gICAgLy8gbXVzdCByZW1vdmUgdGhlIHNvY2tldCB3aGVuIHVubW91bnRlZFxuICAgIHJldHVybiAoKSA9PiB7XG4gICAgICBzb2NrZXQub2ZmKCdjaGF0IG1lc3NhZ2UnKVxuICAgIH1cbiAgfSlcblxuICByZXR1cm4gKFxuICAgIDw+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1haW5cIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNoYXRcIiByZWY9e2NoYXRSZWZ9PlxuICAgICAgICAgICAgPHVsIGNsYXNzTmFtZT1cIm1lc3NhZ2VcIj57bGlzdH08L3VsPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5wdXRcIj5cbiAgICAgICAgICAgIDxUZXh0RmllbGRcbiAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidGV4dFwiXG4gICAgICAgICAgICAgIHZhbHVlPXttZXNzYWdlfVxuICAgICAgICAgICAgICBvbkNoYW5nZT17aGFuZGxlTWVzc2FnZX1cbiAgICAgICAgICAgICAgb25LZXlEb3duPXtoYW5kbGVLZXlEb3dufVxuICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDxCdXR0b24gb25DbGljaz17aGFuZGxlU2VuZH0gY2xhc3NOYW1lPVwic2VuZFwiPlxuICAgICAgICAgICAgICBTRU5EXG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICBib2R5IHtcbiAgICAgICAgICBtYXJnaW46IDBweDtcbiAgICAgICAgfVxuICAgICAgICAuY29udGFpbmVyIHtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgICAgIH1cbiAgICAgICAgLm1haW4ge1xuICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gICAgICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgICAgIGJvcmRlcjogMXB4IGJsYWNrIHNvbGlkO1xuICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gICAgICAgICAgaGVpZ2h0OiA5MHZoO1xuICAgICAgICAgIHdpZHRoOiA3MCU7XG4gICAgICAgIH1cbiAgICAgICAgLmNoYXQge1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIGhlaWdodDogOTMlO1xuICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHggMTBweCAwIDA7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcGluaztcbiAgICAgICAgICBvdmVyZmxvdzogYXV0bztcbiAgICAgICAgfVxuICAgICAgICAuaW5wdXQge1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIGhlaWdodDogNyU7XG4gICAgICAgICAgYm9yZGVyLXJhZGl1czogMCAwIDEwcHggMTBweDtcbiAgICAgICAgICBib3JkZXI6IDFweCBidXJseXdvb2Qgc29saWQ7XG4gICAgICAgIH1cbiAgICAgICAgLnRleHQge1xuICAgICAgICAgIHdpZHRoOiA3MCU7XG4gICAgICAgICAgaGVpZ2h0OiA4MCU7XG4gICAgICAgIH1cbiAgICAgICAgLnNlbmQge1xuICAgICAgICAgIHdpZHRoOiAyNSU7XG4gICAgICAgICAgaGVpZ2h0OiA4MCU7XG4gICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gICAgICAgICAgYmFja2dyb3VuZDogYmxhY2s7XG4gICAgICAgIH1cbiAgICAgIGB9PC9zdHlsZT5cbiAgICAgIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgICAgIC5tZXNzYWdlIHtcbiAgICAgICAgICBsaXN0LXN0eWxlLXR5cGU6IG5vbmU7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgICAgIH1cbiAgICAgICAgLm1lc3NhZ2UgbGk6bnRoLWNoaWxkKG9kZCkge1xuICAgICAgICAgIGJhY2tncm91bmQ6IGJlaWdlO1xuICAgICAgICB9XG4gICAgICBgfTwvc3R5bGU+XG4gICAgPC8+XG4gIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgSW5kZXhcbiJdfQ== */\n/*@ sourceURL=/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/index.js */"));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Index);
+    __self: this
+  }, __jsx(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174
+    },
+    __self: this
+  })), __jsx("div", {
+    className: classes.grow,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 176
+    },
+    __self: this
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
+    edge: "end",
+    color: "inherit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 177
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 178
+    },
+    __self: this
+  }))))))));
+}
 
 /***/ }),
 
@@ -252,25 +551,47 @@ module.exports = __webpack_require__(/*! /Users/xxxmrg/Downloads/Code/Git/gabrie
 
 /***/ }),
 
-/***/ "@material-ui/core/Button":
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
+
+/***/ }),
+
+/***/ "@material-ui/core/styles":
 /*!*******************************************!*\
-  !*** external "@material-ui/core/Button" ***!
+  !*** external "@material-ui/core/styles" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/Button");
+module.exports = require("@material-ui/core/styles");
 
 /***/ }),
 
-/***/ "@material-ui/core/TextField":
+/***/ "@material-ui/icons/MoreVert":
 /*!**********************************************!*\
-  !*** external "@material-ui/core/TextField" ***!
+  !*** external "@material-ui/icons/MoreVert" ***!
   \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("@material-ui/core/TextField");
+module.exports = require("@material-ui/icons/MoreVert");
+
+/***/ }),
+
+/***/ "@material-ui/icons/Telegram":
+/*!**********************************************!*\
+  !*** external "@material-ui/icons/Telegram" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/Telegram");
 
 /***/ }),
 
@@ -293,17 +614,6 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("socket.io-client");
-
-/***/ }),
-
-/***/ "styled-jsx/style":
-/*!***********************************!*\
-  !*** external "styled-jsx/style" ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
 
 /***/ })
 

@@ -1,9 +1,9 @@
-webpackHotUpdate("static/development/pages/new.js",{
+webpackHotUpdate("static/development/pages/index.js",{
 
-/***/ "./pages/new.js":
-/*!**********************!*\
-  !*** ./pages/new.js ***!
-  \**********************/
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18,8 +18,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core */ "./node_modules/@material-ui/core/esm/index.js");
 /* harmony import */ var _components_chat__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/chat */ "./components/chat.js");
-/* harmony import */ var _material_ui_icons_Chat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Chat */ "./node_modules/@material-ui/icons/Chat.js");
-/* harmony import */ var _material_ui_icons_Chat__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Chat__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Telegram */ "./node_modules/@material-ui/icons/Telegram.js");
+/* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/MoreVert */ "./node_modules/@material-ui/icons/MoreVert.js");
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/esm/styles/index.js");
@@ -28,7 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/new.js";
+var _jsxFileName = "/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
@@ -50,7 +50,7 @@ var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_8__["ma
     padding: '0 30px'
   },
   root: {
-    height: '100vh',
+    maxHeight: '100vh',
     overflow: 'hidden',
     padding: 0
   },
@@ -94,7 +94,7 @@ function HideOnScroll(props) {
       "in": !trigger,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 70
       },
       __self: this
     }, children);
@@ -103,7 +103,7 @@ function HideOnScroll(props) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 75
     },
     __self: this
   }, children);
@@ -188,7 +188,7 @@ function Layout(props) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["CssBaseline"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 142
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Container"], {
@@ -196,21 +196,21 @@ function Layout(props) {
     maxWidth: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 143
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Paper"], {
     elevation: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 144
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     container: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 145
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -218,7 +218,7 @@ function Layout(props) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 146
     },
     __self: this
   }, __jsx("div", {
@@ -226,7 +226,7 @@ function Layout(props) {
     ref: chat,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 147
     },
     __self: this
   }, __jsx(HideOnScroll, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -234,34 +234,34 @@ function Layout(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 148
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["AppBar"], {
     position: "sticky",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 149
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Toolbar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 150
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Typography"], {
     variant: "h6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 151
     },
     __self: this
   }, "Gabriel Chat")))), __jsx(_components_chat__WEBPACK_IMPORTED_MODULE_5__["default"], {
     data: data,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 155
     },
     __self: this
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["AppBar"], {
@@ -269,13 +269,13 @@ function Layout(props) {
     className: classes.appBar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 158
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Toolbar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 159
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["TextField"], {
@@ -287,7 +287,7 @@ function Layout(props) {
     onKeyDown: handleKeyDown,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 160
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Fab"], {
@@ -297,20 +297,20 @@ function Layout(props) {
     onClick: handleSend,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 168
     },
     __self: this
-  }, __jsx(_material_ui_icons_Chat__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, __jsx(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 174
     },
     __self: this
   })), __jsx("div", {
     className: classes.grow,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 176
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["IconButton"], {
@@ -318,13 +318,13 @@ function Layout(props) {
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 177
     },
     __self: this
   }, __jsx(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_7___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 179
+      lineNumber: 178
     },
     __self: this
   }))))))));
@@ -333,4 +333,4 @@ function Layout(props) {
 /***/ })
 
 })
-//# sourceMappingURL=new.js.8943619639adff7d4fd2.hot-update.js.map
+//# sourceMappingURL=index.js.ee4bc508b86e7b8a8822.hot-update.js.map

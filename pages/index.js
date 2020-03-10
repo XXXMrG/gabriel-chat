@@ -13,7 +13,7 @@ import {
   Slide,
 } from '@material-ui/core'
 import Chat from '../components/chat'
-import ChatIcon from '@material-ui/icons/Chat'
+import TelegramIcon from '@material-ui/icons/Telegram'
 import MoreIcon from '@material-ui/icons/MoreVert'
 import { makeStyles } from '@material-ui/core/styles'
 import { useRef, useState, useEffect } from 'react'
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     padding: '0 30px',
   },
   root: {
-    height: '100vh',
+    maxHeight: '100vh',
     overflow: 'hidden',
     padding: 0,
   },
@@ -171,7 +171,7 @@ export default function Layout(props) {
                   className={classes.fabButton}
                   onClick={handleSend}
                 >
-                  <ChatIcon />
+                  <TelegramIcon />
                 </Fab>
                 <div className={classes.grow} />
                 <IconButton edge="end" color="inherit">
