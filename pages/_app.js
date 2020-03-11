@@ -23,7 +23,7 @@ export default class MyApp extends App {
           <title>Gabriel Chat</title>
           <meta
             name="viewport"
-            content="minimum-scale=1, initial-scale=1, user-scalable=no, width=device-width"
+            content="minimum-scale=1, initial-scale=1, user-scalable=0, width=device-width, height=device-height"
           />
           <link rel="shortcut icon" href="/favicon.png" />
         </Head>

@@ -226,10 +226,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/MoreVert */ "@material-ui/icons/MoreVert");
 /* harmony import */ var _material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
-/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
-/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _material_ui_icons_PeopleOutlined__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/PeopleOutlined */ "@material-ui/icons/PeopleOutlined");
+/* harmony import */ var _material_ui_icons_PeopleOutlined__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_PeopleOutlined__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/styles */ "@material-ui/core/styles");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! socket.io-client */ "socket.io-client");
+/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(socket_io_client__WEBPACK_IMPORTED_MODULE_7__);
 var _jsxFileName = "/Users/xxxmrg/Downloads/Code/Git/gabriel-chat/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -243,8 +245,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-const socket = socket_io_client__WEBPACK_IMPORTED_MODULE_6___default()('https://api.xkeith.tech:3000');
-const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_5__["makeStyles"])({
+
+const socket = socket_io_client__WEBPACK_IMPORTED_MODULE_7___default()('https://api.xkeith.tech:3000');
+const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_6__["makeStyles"])({
   send: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
     border: 0,
@@ -301,7 +304,7 @@ function HideOnScroll(props) {
       in: !trigger,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 72
       },
       __self: this
     }, children);
@@ -310,7 +313,7 @@ function HideOnScroll(props) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: this
   }, children);
@@ -339,6 +342,10 @@ function Layout(props) {
     0: userName,
     1: setName
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  const {
+    0: online,
+    1: setOnline
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
 
   const handleMessage = e => {
     e.preventDefault();
@@ -378,13 +385,18 @@ function Layout(props) {
       }]); // make scrollbar to the bottom
 
       current.scrollTop = current.scrollHeight;
+    });
+    socket.on('user change', msg => {
+      setOnline(msg.online);
     }); // must remove the socket when unmounted
 
     return () => {
       socket.off('chat message');
+      socket.off('user change');
     };
   });
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    socket.emit('login');
     setTrigger(chat.current);
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
@@ -395,7 +407,7 @@ function Layout(props) {
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["CssBaseline"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 150
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Container"], {
@@ -403,21 +415,21 @@ function Layout(props) {
     maxWidth: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 151
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Paper"], {
     elevation: 3,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 152
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 153
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
@@ -425,7 +437,7 @@ function Layout(props) {
     xs: 12,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 154
     },
     __self: this
   }, __jsx("div", {
@@ -433,7 +445,7 @@ function Layout(props) {
     ref: chat,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 155
     },
     __self: this
   }, __jsx(HideOnScroll, _extends({
@@ -441,34 +453,57 @@ function Layout(props) {
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 156
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
     position: "sticky",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 157
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 158
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Typography"], {
     variant: "h6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 159
     },
     __self: this
-  }, "Gabriel Chat")))), __jsx(_components_chat__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Gabriel Chat"), __jsx("div", {
+    className: classes.grow,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 160
+    },
+    __self: this
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Badge"], {
+    badgeContent: online,
+    color: "secondary",
+    edge: "end",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 161
+    },
+    __self: this
+  }, __jsx(_material_ui_icons_PeopleOutlined__WEBPACK_IMPORTED_MODULE_5___default.a, {
+    fontSize: "large",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 162
+    },
+    __self: this
+  }))))), __jsx(_components_chat__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: data,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 167
     },
     __self: this
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["AppBar"], {
@@ -476,13 +511,13 @@ function Layout(props) {
     className: classes.appBar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 170
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Toolbar"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 171
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["TextField"], {
@@ -494,7 +529,7 @@ function Layout(props) {
     onKeyDown: handleKeyDown,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 172
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Fab"], {
@@ -504,20 +539,20 @@ function Layout(props) {
     onClick: handleSend,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 180
     },
     __self: this
   }, __jsx(_material_ui_icons_Telegram__WEBPACK_IMPORTED_MODULE_3___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 186
     },
     __self: this
   })), __jsx("div", {
     className: classes.grow,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 176
+      lineNumber: 188
     },
     __self: this
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["IconButton"], {
@@ -525,13 +560,13 @@ function Layout(props) {
     color: "inherit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 189
     },
     __self: this
   }, __jsx(_material_ui_icons_MoreVert__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 178
+      lineNumber: 190
     },
     __self: this
   }))))))));
@@ -581,6 +616,17 @@ module.exports = require("@material-ui/core/styles");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/icons/MoreVert");
+
+/***/ }),
+
+/***/ "@material-ui/icons/PeopleOutlined":
+/*!****************************************************!*\
+  !*** external "@material-ui/icons/PeopleOutlined" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/icons/PeopleOutlined");
 
 /***/ }),
 

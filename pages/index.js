@@ -11,10 +11,12 @@ import {
   Fab,
   useScrollTrigger,
   Slide,
+  Badge,
 } from '@material-ui/core'
 import Chat from '../components/chat'
 import TelegramIcon from '@material-ui/icons/Telegram'
 import MoreIcon from '@material-ui/icons/MoreVert'
+import PeopleOutlinedIcon from '@material-ui/icons/PeopleOutlined'
 import { makeStyles } from '@material-ui/core/styles'
 import { useRef, useState, useEffect } from 'react'
 import io from 'socket.io-client'
@@ -85,6 +87,7 @@ export default function Layout(props) {
   const [message, setMessage] = useState('')
   const [trigger, setTrigger] = useState(null)
   const [userName, setName] = useState('')
+  const [online, setOnline] = useState(0)
 
   const handleMessage = e => {
     e.preventDefault()
@@ -121,13 +124,18 @@ export default function Layout(props) {
       // make scrollbar to the bottom
       current.scrollTop = current.scrollHeight
     })
+    socket.on('user change', msg => {
+      setOnline(msg.online)
+    })
     // must remove the socket when unmounted
     return () => {
       socket.off('chat message')
+      socket.off('user change')
     }
   })
 
   useEffect(() => {
+    socket.emit('login')
     setTrigger(chat.current)
   }, [])
 
@@ -149,6 +157,10 @@ export default function Layout(props) {
                   <AppBar position="sticky">
                     <Toolbar>
                       <Typography variant="h6">Gabriel Chat</Typography>
+                      <div className={classes.grow} />
+                      <Badge badgeContent={online} color="secondary" edge="end">
+                        <PeopleOutlinedIcon fontSize="large" />
+                      </Badge>
                     </Toolbar>
                   </AppBar>
                 </HideOnScroll>
