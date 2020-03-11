@@ -457,7 +457,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_1___default.a {
       __self: this
     }, "Gabriel Chat"), __jsx("meta", {
       name: "viewport",
-      content: "minimum-scale=1, initial-scale=1, width=device-width",
+      content: "minimum-scale=1, initial-scale=1, user-scalable=no, width=device-width",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 24

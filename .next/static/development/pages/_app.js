@@ -19044,7 +19044,7 @@ var MyApp = /*#__PURE__*/function (_App) {
         __self: this
       }, "Gabriel Chat"), __jsx("meta", {
         name: "viewport",
-        content: "minimum-scale=1, initial-scale=1, width=device-width",
+        content: "minimum-scale=1, initial-scale=1, user-scalable=no, width=device-width",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24

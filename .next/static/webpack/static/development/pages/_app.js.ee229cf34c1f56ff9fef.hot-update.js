@@ -85,7 +85,7 @@ var MyApp = /*#__PURE__*/function (_App) {
         __self: this
       }, "Gabriel Chat"), __jsx("meta", {
         name: "viewport",
-        content: "minimum-scale=1, initial-scale=1, width=device-width",
+        content: "minimum-scale=1, initial-scale=1, user-scalable=no, width=device-width",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
@@ -130,4 +130,4 @@ var MyApp = /*#__PURE__*/function (_App) {
 /***/ })
 
 })
-//# sourceMappingURL=_app.js.06176caf1ec72221d245.hot-update.js.map
+//# sourceMappingURL=_app.js.ee229cf34c1f56ff9fef.hot-update.js.map

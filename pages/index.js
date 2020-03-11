@@ -19,7 +19,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { useRef, useState, useEffect } from 'react'
 import io from 'socket.io-client'
 
-const socket = io('https://xkeith.tech:3000')
+const socket = io('https://api.xkeith.tech:3000')
 
 const useStyles = makeStyles({
   send: {

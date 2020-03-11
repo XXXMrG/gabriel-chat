@@ -60012,7 +60012,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 
-var socket = socket_io_client__WEBPACK_IMPORTED_MODULE_9___default()('https://xkeith.tech:3000');
+var socket = socket_io_client__WEBPACK_IMPORTED_MODULE_9___default()('https://api.xkeith.tech:3000');
 var useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_8__["makeStyles"])({
   send: {
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
